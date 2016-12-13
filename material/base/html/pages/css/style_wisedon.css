@@ -16,3 +16,9 @@
 background-color: #2e2a24 ;
 
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #f07d00;
+    border-color: #f07d00;
+}
