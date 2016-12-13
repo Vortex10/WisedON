@@ -14,11 +14,26 @@
 }
 .social {
 background-color: #2e2a24 ;
-
+height:50px ;
+padding-top: 3px;
+padding-left: 10px;
 }
-
+.socialsign{
+color:#c9c9c9;}
 .btn-primary {
     color: #fff;
     background-color: #f07d00;
     border-color: #f07d00;
 }
+.icon{
+  color: #008ec9;
+}
+span.icontexto {
+    color: #cececd;
+  }
+  .btn-icon {
+      padding-top: 0px !important;
+  }
+  .panel {
+    background-color: #009ee3 !important;
+  }
