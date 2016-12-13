@@ -3,8 +3,9 @@
     font-size: 18px;
     line-height: 1.3333333;
     border-radius: 0px;
-    width: 180px;
+    width: 140px;
     height: 45px;
+        font-weight: 500;
 }
 .page-login-v3 form a {
     margin-left: 0px !important;
@@ -53,7 +54,6 @@ a.pw {
     border-radius: 0px;
 }
 label.labelform {
-    text-align: left;
     float: left;
     color: #fff;
 }
