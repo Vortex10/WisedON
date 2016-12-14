@@ -57,3 +57,21 @@ label.labelform {
     float: left;
     color: #fff;
 }
+.signin{
+color:#fff;
+
+}
+.lowercase{
+  text-transform: lowercase;
+
+}
+.bluebold{
+  color:#00608b;
+  font-weight:bolder;
+}
+a.bluebold:hover{
+  color:#fff;
+}
+.logopanel{
+  background-color:#fff;
+}
