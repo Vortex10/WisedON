@@ -75,9 +75,10 @@ img.brand-img {
     padding: 30px;
     width:80%;
 }
-.linkwhites{
+.linkwhite{
   margin-left:0px ;
 }
+
 
 
 /** Specific Login Page **/
@@ -107,4 +108,7 @@ img.brand-img {
     background-color: #f07d00;
     border-color: #f07d00;
     float: left;
+}
+.page-register-v3 form a {
+    margin-left: 0px;
 }
