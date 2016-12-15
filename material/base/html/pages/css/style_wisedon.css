@@ -59,7 +59,7 @@ label.labelform {
 }
 .signin{
 color:#fff;
-
+font-size: 18px;
 }
 .lowercase{
   text-transform: lowercase;
@@ -74,4 +74,10 @@ a.bluebold:hover{
 }
 .logopanel{
   background-color:#fff;
+}
+.page-login-v3 .panel .panel-body {
+    padding: 10px 40px 40px;
+}
+img.brand-img {
+    padding: 30px;
 }
