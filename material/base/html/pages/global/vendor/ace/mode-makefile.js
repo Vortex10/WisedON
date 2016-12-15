@@ -1,7 +1,7 @@
 ace.define("ace/mode/sh_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var reservedKeywords = exports.reservedKeywords = (
@@ -220,7 +220,7 @@ exports.ShHighlightRules = ShHighlightRules;
 ace.define("ace/mode/makefile_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules","ace/mode/sh_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var ShHighlightFile = require("./sh_highlight_rules");
@@ -293,9 +293,9 @@ exports.MakefileHighlightRules = MakefileHighlightRules;
 ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
+var oop = require("lib/oop");
 var BaseFoldMode = require("./fold_mode").FoldMode;
-var Range = require("../../range").Range;
+var Range = require("range").Range;
 
 var FoldMode = exports.FoldMode = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
@@ -380,7 +380,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/makefile",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/makefile_highlight_rules","ace/mode/folding/coffee"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var MakefileHighlightRules = require("./makefile_highlight_rules").MakefileHighlightRules;
 var FoldMode = require("./folding/coffee").FoldMode;

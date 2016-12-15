@@ -1,8 +1,8 @@
 ace.define("ace/mode/tex_highlight_rules",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
+var oop = require("lib/oop");
+var lang = require("lib/lang");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var TexHighlightRules = function(textClass) {
@@ -80,8 +80,8 @@ exports.TexHighlightRules = TexHighlightRules;
 ace.define("ace/mode/r_highlight_rules",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/mode/text_highlight_rules","ace/mode/tex_highlight_rules"], function(require, exports, module)
 {
 
-   var oop = require("../lib/oop");
-   var lang = require("../lib/lang");
+   var oop = require("lib/oop");
+   var lang = require("lib/lang");
    var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
    var TexHighlightRules = require("./tex_highlight_rules").TexHighlightRules;
 
@@ -238,7 +238,7 @@ ace.define("ace/mode/r_highlight_rules",["require","exports","module","ace/lib/o
 ace.define("ace/mode/matching_brace_outdent",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var MatchingBraceOutdent = function() {};
 
@@ -278,13 +278,13 @@ exports.MatchingBraceOutdent = MatchingBraceOutdent;
 ace.define("ace/mode/r",["require","exports","module","ace/range","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/mode/r_highlight_rules","ace/mode/matching_brace_outdent","ace/unicode"], function(require, exports, module) {
    "use strict";
 
-   var Range = require("../range").Range;
-   var oop = require("../lib/oop");
+   var Range = require("range").Range;
+   var oop = require("lib/oop");
    var TextMode = require("./text").Mode;
    var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
    var RHighlightRules = require("./r_highlight_rules").RHighlightRules;
    var MatchingBraceOutdent = require("./matching_brace_outdent").MatchingBraceOutdent;
-   var unicode = require("../unicode");
+   var unicode = require("unicode");
 
    var Mode = function()
    {

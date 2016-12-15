@@ -139,7 +139,7 @@ function buildTable($el, cells, rows) {
   // -------------------------------
   (function() {
     $('#exampleTableColumns').bootstrapTable({
-      url: "../../assets/data/bootstrap_table_test.json",
+      url: "assets/data/bootstrap_table_test.json",
       height: "400",
       showColumns: true,
       iconsPrefix: 'icon',
@@ -162,7 +162,7 @@ function buildTable($el, cells, rows) {
   // -------------------------------
   (function() {
     $('#exampleTableToolbar').bootstrapTable({
-      url: "../../assets/data/bootstrap_table_test2.json",
+      url: "assets/data/bootstrap_table_test2.json",
       search: true,
       showRefresh: true,
       showToggle: true,
@@ -183,7 +183,7 @@ function buildTable($el, cells, rows) {
   // ------------------------------
   (function() {
     $('#exampleTableEvents').bootstrapTable({
-      url: "../../assets/data/bootstrap_table_test.json",
+      url: "assets/data/bootstrap_table_test.json",
       search: true,
       pagination: true,
       showRefresh: true,

@@ -1349,9 +1349,9 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -2901,9 +2901,9 @@ ace.define("ace/mode/lua/luaparse",["require","exports","module"], function(requ
 ace.define("ace/mode/lua_worker",["require","exports","module","ace/lib/oop","ace/worker/mirror","ace/mode/lua/luaparse"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var Mirror = require("../worker/mirror").Mirror;
-var luaparse = require("../mode/lua/luaparse");
+var oop = require("lib/oop");
+var Mirror = require("worker/mirror").Mirror;
+var luaparse = require("mode/lua/luaparse");
 
 var Worker = exports.Worker = function(sender) {
     Mirror.call(this, sender);

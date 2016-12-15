@@ -114,7 +114,7 @@
       <div class="comment media">
         <div class="media-left">
           <a class="avatar avatar-lg" href="javascript:void(0)">
-            <img src="../../../../global/portraits/5.jpg" alt="...">
+            <img src="global/portraits/5.jpg" alt="...">
           </a>
         </div>
         <div class="media-body">

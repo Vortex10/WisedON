@@ -2071,10 +2071,10 @@ exports.XQueryLexer = function(){ return new Lexer(XQueryTokenizer, Rules); };
 ace.define("ace/mode/behaviour/cstyle",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/token_iterator","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Behaviour = require("../behaviour").Behaviour;
-var TokenIterator = require("../../token_iterator").TokenIterator;
-var lang = require("../../lib/lang");
+var oop = require("lib/oop");
+var Behaviour = require("behaviour").Behaviour;
+var TokenIterator = require("token_iterator").TokenIterator;
+var lang = require("lib/lang");
 
 var SAFE_INSERT_IN_TOKENS =
     ["text", "paren.rparen", "punctuation.operator"];
@@ -2428,10 +2428,10 @@ exports.CstyleBehaviour = CstyleBehaviour;
 ace.define("ace/mode/behaviour/xml",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/token_iterator","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Behaviour = require("../behaviour").Behaviour;
-var TokenIterator = require("../../token_iterator").TokenIterator;
-var lang = require("../../lib/lang");
+var oop = require("lib/oop");
+var Behaviour = require("behaviour").Behaviour;
+var TokenIterator = require("token_iterator").TokenIterator;
+var lang = require("lib/lang");
 
 function is(token, type) {
     return token.type.lastIndexOf(type + ".xml") > -1;
@@ -2591,11 +2591,11 @@ exports.XmlBehaviour = XmlBehaviour;
 ace.define("ace/mode/behaviour/xquery",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/mode/behaviour/cstyle","ace/mode/behaviour/xml","ace/token_iterator"], function(require, exports, module) {
 "use strict";
 
-  var oop = require("../../lib/oop");
-  var Behaviour = require('../behaviour').Behaviour;
+  var oop = require("lib/oop");
+  var Behaviour = require('behaviour').Behaviour;
   var CstyleBehaviour = require('./cstyle').CstyleBehaviour;
-  var XmlBehaviour = require("../behaviour/xml").XmlBehaviour;
-  var TokenIterator = require("../../token_iterator").TokenIterator;
+  var XmlBehaviour = require("behaviour/xml").XmlBehaviour;
+  var TokenIterator = require("token_iterator").TokenIterator;
 
 function hasType(token, type) {
     var hasType = true;
@@ -2655,8 +2655,8 @@ function hasType(token, type) {
 ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
 
 var FoldMode = exports.FoldMode = function(commentRegex) {
@@ -2795,15 +2795,15 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/xquery",["require","exports","module","ace/worker/worker_client","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/mode/xquery/xquery_lexer","ace/range","ace/mode/behaviour/xquery","ace/mode/folding/cstyle","ace/anchor"], function(require, exports, module) {
 "use strict";
 
-var WorkerClient = require("../worker/worker_client").WorkerClient;
-var oop = require("../lib/oop");
+var WorkerClient = require("worker/worker_client").WorkerClient;
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 var XQueryLexer = require("./xquery/xquery_lexer").XQueryLexer;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 var XQueryBehaviour = require("./behaviour/xquery").XQueryBehaviour;
 var CStyleFoldMode = require("./folding/cstyle").FoldMode;
-var Anchor = require("../anchor").Anchor;
+var Anchor = require("anchor").Anchor;
 
 var Mode = function() {
     this.$tokenizer   = new XQueryLexer();

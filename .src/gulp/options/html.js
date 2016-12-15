@@ -5,7 +5,7 @@
  *
  */
 // config
-var config = require('../../config.json');
+var config = require('config.json');
 
 module.exports = {
   hb: {

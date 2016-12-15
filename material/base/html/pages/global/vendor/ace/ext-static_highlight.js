@@ -1,8 +1,8 @@
 ace.define("ace/ext/static_highlight",["require","exports","module","ace/edit_session","ace/layer/text","ace/config","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 
-var EditSession = require("../edit_session").EditSession;
-var TextLayer = require("../layer/text").Text;
+var EditSession = require("edit_session").EditSession;
+var TextLayer = require("layer/text").Text;
 var baseStyles = ".ace_static_highlight {\
 font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', 'Droid Sans Mono', monospace;\
 font-size: 12px;\
@@ -36,8 +36,8 @@ counter-increment: ace_line;\
 counter-reset: ace_line;\
 }\
 ";
-var config = require("../config");
-var dom = require("../lib/dom");
+var config = require("config");
+var dom = require("lib/dom");
 
 var SimpleTextLayer = function() {
     this.config = {};

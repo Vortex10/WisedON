@@ -1,7 +1,7 @@
 ace.define("ace/ext/whitespace",["require","exports","module","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var lang = require("../lib/lang");
+var lang = require("lib/lang");
 exports.$detectIndentation = function(lines, fallback) {
     var stats = [];
     var changes = [];

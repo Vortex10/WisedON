@@ -1,10 +1,10 @@
 var del = require('del');
 
 // config
-var config = require('../../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../../options/html');
+var options = require('options/html');
 
 module.exports = function (done) {
   del(config.destination.html + '/*/*.css', { force: true })

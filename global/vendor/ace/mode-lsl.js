@@ -1,7 +1,7 @@
 ace.define("ace/mode/lsl_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 oop.inherits(LSLHighlightRules, TextHighlightRules);
@@ -94,7 +94,7 @@ exports.LSLHighlightRules = LSLHighlightRules;
 ace.define("ace/mode/matching_brace_outdent",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var MatchingBraceOutdent = function() {};
 
@@ -134,10 +134,10 @@ exports.MatchingBraceOutdent = MatchingBraceOutdent;
 ace.define("ace/mode/behaviour/cstyle",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/token_iterator","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Behaviour = require("../behaviour").Behaviour;
-var TokenIterator = require("../../token_iterator").TokenIterator;
-var lang = require("../../lib/lang");
+var oop = require("lib/oop");
+var Behaviour = require("behaviour").Behaviour;
+var TokenIterator = require("token_iterator").TokenIterator;
+var lang = require("lib/lang");
 
 var SAFE_INSERT_IN_TOKENS =
     ["text", "paren.rparen", "punctuation.operator"];
@@ -491,8 +491,8 @@ exports.CstyleBehaviour = CstyleBehaviour;
 ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
 
 var FoldMode = exports.FoldMode = function(commentRegex) {
@@ -633,11 +633,11 @@ ace.define("ace/mode/lsl",["require","exports","module","ace/mode/lsl_highlight_
 
 var Rules = require("./lsl_highlight_rules").LSLHighlightRules;
 var Outdent = require("./matching_brace_outdent").MatchingBraceOutdent;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 var TextMode = require("./text").Mode;
 var CstyleBehaviour = require("./behaviour/cstyle").CstyleBehaviour;
 var CStyleFoldMode = require("./folding/cstyle").FoldMode;
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 
 var Mode = function() {
     this.HighlightRules = Rules;

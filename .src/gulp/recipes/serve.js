@@ -3,10 +3,10 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 // config
-var config = require('../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../options/serve');
+var options = require('options/serve');
 
 
 module.exports = function () {

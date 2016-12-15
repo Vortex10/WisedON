@@ -151,7 +151,7 @@ module.exports = {
 'use strict';
 
 var config = require('./config'),
-    version = require('../package.json').version;
+    version = require('package.json').version;
 
 module.exports = function(path, accessToken) {
     accessToken = accessToken || L.mapbox.accessToken;
@@ -192,7 +192,7 @@ module.exports.tileJSON = function(urlOrMapID, accessToken) {
     return url;
 };
 
-},{"../package.json":2,"./config":3}],5:[function(require,module,exports){
+},{"package.json":2,"./config":3}],5:[function(require,module,exports){
 'use strict';
 
 function utfDecode(c) {

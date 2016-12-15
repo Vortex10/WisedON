@@ -11,7 +11,7 @@
   // Example File Upload
   // -------------------
   $('#exampleUploadForm').fileupload({
-    url: '../../server/fileupload/',
+    url: 'server/fileupload/',
     dropzone: $('#exampleUploadForm'),
     filesContainer: $('.file-list'),
     uploadTemplateId: false,

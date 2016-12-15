@@ -91,6 +91,6 @@ color: #EAF1A3\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWOQkpLyZfD09PwPAAfYAnaStpHRAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

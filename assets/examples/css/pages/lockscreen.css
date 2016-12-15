@@ -1,5 +1,5 @@
 .page-locked:before {
-  background-image: url("../../images/lockscreen.jpg");
+  background-image: url("images/lockscreen.jpg");
 }
 .page-locked .avatar {
   margin-bottom: 15px;

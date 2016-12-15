@@ -116,6 +116,6 @@ color: #C2C280\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYFBXV/8PAAJoAXX4kT2EAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

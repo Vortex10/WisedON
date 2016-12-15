@@ -1,7 +1,7 @@
 ace.define("ace/mode/erlang_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var ErlangHighlightRules = function() {
@@ -840,8 +840,8 @@ exports.ErlangHighlightRules = ErlangHighlightRules;
 ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
 
 var FoldMode = exports.FoldMode = function(commentRegex) {
@@ -980,7 +980,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/erlang",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/erlang_highlight_rules","ace/mode/folding/cstyle"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var ErlangHighlightRules = require("./erlang_highlight_rules").ErlangHighlightRules;
 var FoldMode = require("./folding/cstyle").FoldMode;

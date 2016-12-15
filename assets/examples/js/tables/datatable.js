@@ -93,7 +93,7 @@
         ],
         "sDom": '<"dt-panelmenu clearfix"Tfr>t<"dt-panelfooter clearfix"ip>',
         "oTableTools": {
-          "sSwfPath": "../../../global/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf"
+          "sSwfPath": "global/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf"
         }
       });
 

@@ -1,7 +1,7 @@
 ace.define("ace/mode/applescript_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var AppleScriptHighlightRules = function() {
@@ -109,8 +109,8 @@ exports.AppleScriptHighlightRules = AppleScriptHighlightRules;
 ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
 
 var FoldMode = exports.FoldMode = function(commentRegex) {
@@ -249,9 +249,9 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/applescript",["require","exports","module","ace/lib/oop","ace/mode/text","ace/tokenizer","ace/mode/applescript_highlight_rules","ace/mode/folding/cstyle"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
-var Tokenizer = require("../tokenizer").Tokenizer;
+var Tokenizer = require("tokenizer").Tokenizer;
 var AppleScriptHighlightRules = require("./applescript_highlight_rules").AppleScriptHighlightRules;
 var FoldMode = require("./folding/cstyle").FoldMode;
 

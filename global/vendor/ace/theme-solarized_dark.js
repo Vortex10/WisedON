@@ -83,6 +83,6 @@ color: #657B83\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNg0Db1ZVCxc/sPAAd4AlUHlLenAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

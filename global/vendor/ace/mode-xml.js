@@ -1,7 +1,7 @@
 ace.define("ace/mode/xml_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var XmlHighlightRules = function(normalize) {
@@ -213,10 +213,10 @@ exports.XmlHighlightRules = XmlHighlightRules;
 ace.define("ace/mode/behaviour/xml",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/token_iterator","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Behaviour = require("../behaviour").Behaviour;
-var TokenIterator = require("../../token_iterator").TokenIterator;
-var lang = require("../../lib/lang");
+var oop = require("lib/oop");
+var Behaviour = require("behaviour").Behaviour;
+var TokenIterator = require("token_iterator").TokenIterator;
+var lang = require("lib/lang");
 
 function is(token, type) {
     return token.type.lastIndexOf(type + ".xml") > -1;
@@ -376,11 +376,11 @@ exports.XmlBehaviour = XmlBehaviour;
 ace.define("ace/mode/folding/xml",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/range","ace/mode/folding/fold_mode","ace/token_iterator"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var lang = require("../../lib/lang");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var lang = require("lib/lang");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
-var TokenIterator = require("../../token_iterator").TokenIterator;
+var TokenIterator = require("token_iterator").TokenIterator;
 
 var FoldMode = exports.FoldMode = function(voidElements, optionalEndTags) {
     BaseFoldMode.call(this);
@@ -617,13 +617,13 @@ function is(token, type) {
 ace.define("ace/mode/xml",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/mode/text","ace/mode/xml_highlight_rules","ace/mode/behaviour/xml","ace/mode/folding/xml","ace/worker/worker_client"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
+var oop = require("lib/oop");
+var lang = require("lib/lang");
 var TextMode = require("./text").Mode;
 var XmlHighlightRules = require("./xml_highlight_rules").XmlHighlightRules;
 var XmlBehaviour = require("./behaviour/xml").XmlBehaviour;
 var XmlFoldMode = require("./folding/xml").FoldMode;
-var WorkerClient = require("../worker/worker_client").WorkerClient;
+var WorkerClient = require("worker/worker_client").WorkerClient;
 
 var Mode = function() {
    this.HighlightRules = XmlHighlightRules;

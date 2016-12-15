@@ -158,7 +158,7 @@
     initMail: function() {
       var self = this;
 
-      $.getJSON('../../../assets/data/appsMailbox.json', function(data) {
+      $.getJSON('assets/data/appsMailbox.json', function(data) {
         var $wrap = $('#mailboxTable');
 
         self.buildMail($wrap, data);

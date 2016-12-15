@@ -3,13 +3,13 @@
 
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
-    mod(require("../../lib/codemirror"), "cjs");
+    mod(require("lib/codemirror"), "cjs");
   else if (typeof define == "function" && define.amd) // AMD
-    define(["../../lib/codemirror"], function(CM) { mod(CM, "amd"); });
+    define(["lib/codemirror"], function(CM) { mod(CM, "amd"); });
   else // Plain browser env
     mod(CodeMirror, "plain");
 })(function(CodeMirror, env) {
-  if (!CodeMirror.modeURL) CodeMirror.modeURL = "../mode/%N/%N.js";
+  if (!CodeMirror.modeURL) CodeMirror.modeURL = "mode/%N/%N.js";
 
   var loading = {};
   function splitCallback(cont, n) {

@@ -1,7 +1,7 @@
 ace.define("ace/mode/abap_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var AbapHighlightRules = function() {
@@ -97,9 +97,9 @@ exports.AbapHighlightRules = AbapHighlightRules;
 ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
+var oop = require("lib/oop");
 var BaseFoldMode = require("./fold_mode").FoldMode;
-var Range = require("../../range").Range;
+var Range = require("range").Range;
 
 var FoldMode = exports.FoldMode = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
@@ -186,9 +186,9 @@ ace.define("ace/mode/abap",["require","exports","module","ace/mode/abap_highligh
 
 var Rules = require("./abap_highlight_rules").AbapHighlightRules;
 var FoldMode = require("./folding/coffee").FoldMode;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 var TextMode = require("./text").Mode;
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 
 function Mode() {
     this.HighlightRules = Rules;

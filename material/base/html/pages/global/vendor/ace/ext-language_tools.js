@@ -907,12 +907,12 @@ var Editor = require("./editor").Editor;
 ace.define("ace/autocomplete/popup",["require","exports","module","ace/virtual_renderer","ace/editor","ace/range","ace/lib/event","ace/lib/lang","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 
-var Renderer = require("../virtual_renderer").VirtualRenderer;
-var Editor = require("../editor").Editor;
-var Range = require("../range").Range;
-var event = require("../lib/event");
-var lang = require("../lib/lang");
-var dom = require("../lib/dom");
+var Renderer = require("virtual_renderer").VirtualRenderer;
+var Editor = require("editor").Editor;
+var Range = require("range").Range;
+var event = require("lib/event");
+var lang = require("lib/lang");
+var dom = require("lib/dom");
 
 var $singleLineEditor = function(el) {
     var renderer = new Renderer(el);
@@ -1726,7 +1726,7 @@ exports.FilteredList = FilteredList;
 });
 
 ace.define("ace/autocomplete/text_completer",["require","exports","module","ace/range"], function(require, exports, module) {
-    var Range = require("../range").Range;
+    var Range = require("range").Range;
     
     var splitRegex = /[^a-zA-Z_0-9\$\-\u00C0-\u1FFF\u2C00-\uD7FF\w]+/;
 
@@ -1772,13 +1772,13 @@ ace.define("ace/autocomplete/text_completer",["require","exports","module","ace/
 ace.define("ace/ext/language_tools",["require","exports","module","ace/snippets","ace/autocomplete","ace/config","ace/lib/lang","ace/autocomplete/util","ace/autocomplete/text_completer","ace/editor","ace/config"], function(require, exports, module) {
 "use strict";
 
-var snippetManager = require("../snippets").snippetManager;
-var Autocomplete = require("../autocomplete").Autocomplete;
-var config = require("../config");
-var lang = require("../lib/lang");
-var util = require("../autocomplete/util");
+var snippetManager = require("snippets").snippetManager;
+var Autocomplete = require("autocomplete").Autocomplete;
+var config = require("config");
+var lang = require("lib/lang");
+var util = require("autocomplete/util");
 
-var textCompleter = require("../autocomplete/text_completer");
+var textCompleter = require("autocomplete/text_completer");
 var keyWordCompleter = {
     getCompletions: function(editor, session, pos, prefix, callback) {
         if (session.$mode.completer) {
@@ -1894,8 +1894,8 @@ var doLiveAutocomplete = function(e) {
     }
 };
 
-var Editor = require("../editor").Editor;
-require("../config").defineOptions(Editor.prototype, "editor", {
+var Editor = require("editor").Editor;
+require("config").defineOptions(Editor.prototype, "editor", {
     enableBasicAutocompletion: {
         set: function(val) {
             if (val) {

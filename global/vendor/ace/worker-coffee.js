@@ -1349,9 +1349,9 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -1420,9 +1420,9 @@ this.trace(e)},parse:function(e){function t(){var e;return e=f.lex()||p,"number"
 ace.define("ace/mode/coffee_worker",["require","exports","module","ace/lib/oop","ace/worker/mirror","ace/mode/coffee/coffee"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var Mirror = require("../worker/mirror").Mirror;
-var coffee = require("../mode/coffee/coffee");
+var oop = require("lib/oop");
+var Mirror = require("worker/mirror").Mirror;
+var coffee = require("mode/coffee/coffee");
 
 window.addEventListener = function() {};
 

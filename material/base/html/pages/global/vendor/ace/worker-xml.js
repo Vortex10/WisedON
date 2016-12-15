@@ -1349,9 +1349,9 @@ exports.Document = Document;
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -3131,9 +3131,9 @@ return {
 ace.define("ace/mode/xml_worker",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/worker/mirror","ace/mode/xml/dom-parser"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
-var Mirror = require("../worker/mirror").Mirror;
+var oop = require("lib/oop");
+var lang = require("lib/lang");
+var Mirror = require("worker/mirror").Mirror;
 var DOMParser = require("./xml/dom-parser").DOMParser;
 
 var Worker = exports.Worker = function(sender) {

@@ -90,6 +90,6 @@ color: #FFFF89\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWMQFxf3ZXB1df0PAAdsAmERTkEHAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

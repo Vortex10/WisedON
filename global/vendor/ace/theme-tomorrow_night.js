@@ -103,6 +103,6 @@ color: #969896\
 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHB3d/8PAAOIAdULw8qMAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

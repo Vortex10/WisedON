@@ -25,18 +25,18 @@ ace.define("ace/keyboard/vim",["require","exports","module","ace/range","ace/lib
     }
     console.log(d);
   }
-  var Range = require("../range").Range;
-  var EventEmitter = require("../lib/event_emitter").EventEmitter;
-  var dom = require("../lib/dom");
-  var oop = require("../lib/oop");
-  var KEYS = require("../lib/keys");
-  var event = require("../lib/event");
-  var Search = require("../search").Search;
-  var useragent = require("../lib/useragent");
-  var SearchHighlight = require("../search_highlight").SearchHighlight;
-  var multiSelectCommands = require("../commands/multi_select_commands");
-  var TextModeTokenRe = require("../mode/text").Mode.prototype.tokenRe;
-  require("../multi_select");
+  var Range = require("range").Range;
+  var EventEmitter = require("lib/event_emitter").EventEmitter;
+  var dom = require("lib/dom");
+  var oop = require("lib/oop");
+  var KEYS = require("lib/keys");
+  var event = require("lib/event");
+  var Search = require("search").Search;
+  var useragent = require("lib/useragent");
+  var SearchHighlight = require("search_highlight").SearchHighlight;
+  var multiSelectCommands = require("commands/multi_select_commands");
+  var TextModeTokenRe = require("mode/text").Mode.prototype.tokenRe;
+  require("multi_select");
 
   var CodeMirror = function(ace) {
     this.ace = ace;

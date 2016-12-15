@@ -2581,7 +2581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        throw new _exception2['default']('Invalid path: ' + original, { loc: loc });
 	      } else if (part === '..') {
 	        depth++;
-	        depthString += '../';
+	        depthString += '';
 	      }
 	    } else {
 	      dig.push(part);
@@ -3114,7 +3114,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var isEligible = !isBlockParam && (isHelper || isSimple);
 
 	    // if ambiguous, we can possibly resolve the ambiguity now
-	    // An eligible helper is one that does not have a complex path, i.e. `this.foo`, `../foo` etc.
+	    // An eligible helper is one that does not have a complex path, i.e. `this.foo`, `foo` etc.
 	    if (isEligible && !isHelper) {
 	      var _name2 = sexpr.path.parts[0],
 	          options = this.options;

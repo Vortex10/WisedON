@@ -237,7 +237,7 @@ exports.Split = Split;
 
 ace.define("ace/ext/split",["require","exports","module","ace/split"], function(require, exports, module) {
 "use strict";
-module.exports = require("../split");
+module.exports = require("split");
 
 });
                 (function() {

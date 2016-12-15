@@ -6,13 +6,13 @@ var rename     = require("gulp-rename");
 var concat     = require('gulp-concat');
 
 // config
-var config = require('../../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../../options/scripts');
+var options = require('options/scripts');
 
 // components
-var components = require('../../../components.json');
+var components = require('components.json');
 var componentsSrc = [];
 
 for(var component in components) {

@@ -12,7 +12,7 @@
 					{
 			          "id": "uid_5",
 			          "name": "Edward Fletcher",
-			          "img": "../../../../global/portraits/5.jpg"
+			          "img": "global/portraits/5.jpg"
 			        }
 				],
 				"subtasks": [
@@ -28,25 +28,25 @@
 				"attachments": [
 					{
 						"title": "attachment 1",
-						"src":"../../../assets/examples/images/txt.png",
+						"src":"assets/examples/images/txt.png",
 						"size": "500K"
 					},
 					{
 						"title": "attachment 2",
-						"src":"../../../../global/photos/object-1-240x160.jpg",
+						"src":"global/photos/object-1-240x160.jpg",
 						"size": "2.04M"
 					}
 				],
 				"comments": [
 					{
 						"user": "Caleb Richards",
-						"src": "../../../../global/portraits/3.jpg",
+						"src": "global/portraits/3.jpg",
 						"time": "2 days ago",
 						"content": "Brute existimant adhibuit effugiendorum artem potiendi sabinum dicat sequitur parabilis, asperner alliciat mutat tale labefactetur corpora, albuci amori velim summam didicisset dubium"
 					},
 					{
 						"user": "Mary Adams",
-						"src": "../../../../global/portraits/2.jpg",
+						"src": "global/portraits/2.jpg",
 						"time": "16 hours ago",
 						"content": "Deduceret, stabilitas diligenter stultorum diesque dolemus consoletur aristippus specie exeamu"
 					}
@@ -62,11 +62,11 @@
 					{
 			          "id": "uid_5",
 			          "name": "Edward Fletcher",
-			          "img": "../../../../global/portraits/5.jpg"
+			          "img": "global/portraits/5.jpg"
 			        }, {
 			          "id": "uid_3",
 			          "name": "Caleb Richards",
-			          "img": "../../../../global/portraits/3.jpg"
+			          "img": "global/portraits/3.jpg"
 			        }
 				],
 				"subtasks": [
@@ -83,7 +83,7 @@
 				"comments": [
 					{
 						"user": "Herman Beck",
-						"src": "../../../../global/portraits/1.jpg",
+						"src": "global/portraits/1.jpg",
 						"time": "2 days ago",
 						"content": "Quicquam alteram splendide romano discordiae cui."
 					}
@@ -104,11 +104,11 @@
 					{
 			          "id": "uid_5",
 			          "name": "Edward Fletcher",
-			          "img": "../../../../global/portraits/5.jpg"
+			          "img": "global/portraits/5.jpg"
 			        }, {
 			          "id": "uid_4",
 			          "name": "June Lane",
-			          "img": "../../../../global/portraits/4.jpg"
+			          "img": "global/portraits/4.jpg"
 			        }
 				],
 				"subtasks": [],
@@ -116,7 +116,7 @@
 				"comments": [
 					{
 						"user": "Herman Beck",
-						"src": "../../../../global/portraits/1.jpg",
+						"src": "global/portraits/1.jpg",
 						"time": "2 days ago",
 						"content": "Cum personae causas hae diligamus."
 					}
@@ -132,32 +132,32 @@
 					{
 						"id": "uid_5",
 			      		"name": "Edward Fletcher",
-			      		"img": "../../../../global/portraits/5.jpg"
+			      		"img": "global/portraits/5.jpg"
 					},{
 						"id": "uid_1",
 						"name": "Herman Beck",
-						"img": "../../../../global/portraits/1.jpg"
+						"img": "global/portraits/1.jpg"
 					}, {
 			          "id": "uid_2",
 			          "name": "Mary Adams",
-			          "img": "../../../../global/portraits/2.jpg"
+			          "img": "global/portraits/2.jpg"
 			        }
 				],
 				"subtasks": [],
 				"attachments": [
 					{
 						"title": "attachment 1",
-						"src":"../../../assets/examples/images/txt.png",
+						"src":"assets/examples/images/txt.png",
 						"size": "500K"
 					},
 					{
 						"title": "attachment 2",
-						"src":"../../../../global/photos/object-1-240x160.jpg",
+						"src":"global/photos/object-1-240x160.jpg",
 						"size": "2.04M"
 					},
 					{
 						"title": "attachment 3",
-						"src":"../../../../global/photos/focus-7-240x240.jpg",
+						"src":"global/photos/focus-7-240x240.jpg",
 						"size": "1.06M"
 					}
 				],
@@ -178,7 +178,7 @@
 					{
 						"id": "uid_6",
 						"name": "Eleanor Greta",
-						"img": "../../../../global/portraits/6.jpg"
+						"img": "global/portraits/6.jpg"
 					}
 				],
 				"subtasks": [],
@@ -195,11 +195,11 @@
 					{
 						"id": "uid_5",
 						"name": "Edward Fletcher",
-						"img": "../../../../global/portraits/5.jpg"
+						"img": "global/portraits/5.jpg"
 					}, {
 						"id": "uid_4",
 						"name": "June Lane",
-						"img": "../../../../global/portraits/4.jpg"
+						"img": "global/portraits/4.jpg"
 					}
 				],
 				"subtasks": [
@@ -216,7 +216,7 @@
 				"comments": [
 					{
 						"user": "Herman Beck",
-						"src": "../../../../global/portraits/1.jpg",
+						"src": "global/portraits/1.jpg",
 						"time": "2 days ago",
 						"content": "Contentus probo opera ab utilitatibus pulcherrimum scripserit"
 					}

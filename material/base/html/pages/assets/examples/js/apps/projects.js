@@ -11,28 +11,28 @@
       var members = [{
           id: 'uid_1',
           name: 'Herman Beck',
-          img: '../../../../global/portraits/1.jpg'
+          img: 'global/portraits/1.jpg'
         }, {
           id: 'uid_2',
           name: 'Mary Adams',
-          img: '../../../../global/portraits/2.jpg'
+          img: 'global/portraits/2.jpg'
         }, {
           id: 'uid_3',
           name: 'Caleb Richards',
-          img: '../../../../global/portraits/3.jpg'
+          img: 'global/portraits/3.jpg'
         }, {
           id: 'uid_4',
           name: 'June Lane',
-          img: '../../../../global/portraits/4.jpg'
+          img: 'global/portraits/4.jpg'
         }],
         selected = [{
           id: 'uid_1',
           name: 'Herman Beck',
-          img: '../../../../global/portraits/1.jpg'
+          img: 'global/portraits/1.jpg'
         }, {
           id: 'uid_2',
           name: 'Caleb Richards',
-          img: '../../../../global/portraits/2.jpg'
+          img: 'global/portraits/2.jpg'
         }];
 
       $('[data-plugin="jquery-selective"]').selective({

@@ -6,13 +6,13 @@ var rename     = require("gulp-rename");
 // var notify     = require('gulp-notify');
 
 // utils
-// var pumped     = require('../../utils/pumped');
+// var pumped     = require('utils/pumped');
 
 // config
-var config = require('../../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../../options/scripts');
+var options = require('options/scripts');
 
 module.exports = function () {
   return gulp.src(config.source.js + '/**/*.js')

@@ -1349,9 +1349,9 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -1456,7 +1456,7 @@ exports.StaticWarning = StaticWarning.prototype.constructor = function(code, mes
 2:[function(require,module,exports){
 'use strict';
 
-var TreeOps = require('../tree_ops').TreeOps;
+var TreeOps = require('tree_ops').TreeOps;
 var Errors = require('./errors');
 var StaticWarning = Errors.StaticWarning;
 exports.ModuleDecl = function(translator, rootSctx, node){
@@ -1598,7 +1598,7 @@ exports.VarRefHandler = function(translator, sctx, node){
     };
 };
 },
-{"../tree_ops":11,"./errors":1}],
+{"tree_ops":11,"./errors":1}],
 3:[function(require,module,exports){
 'use strict';
 exports.getSchemaBuiltinTypes = function(){
@@ -1659,7 +1659,7 @@ exports.getSchemaBuiltinTypes = function(){
 exports.StaticContext = function (parent, pos) {
     'use strict';
     
-    var TreeOps = require('../tree_ops').TreeOps;
+    var TreeOps = require('tree_ops').TreeOps;
     
     var Errors = require('./errors');
     var StaticError = Errors.StaticError;
@@ -2087,7 +2087,7 @@ exports.StaticContext = function (parent, pos) {
 };
 
 },
-{"../tree_ops":11,"./errors":1,"./schema_built-in_types":3}],
+{"tree_ops":11,"./errors":1,"./schema_built-in_types":3}],
 5:[function(require,module,exports){
 exports.Translator = function(rootStcx, ast){
     'use strict';
@@ -2096,7 +2096,7 @@ exports.Translator = function(rootStcx, ast){
     var StaticError = Errors.StaticError;
     var StaticWarning = Errors.StaticWarning;
     
-    var TreeOps = require('../tree_ops').TreeOps;
+    var TreeOps = require('tree_ops').TreeOps;
     var StaticContext = require('./static_context').StaticContext;
     var Handlers = require('./handlers');
     
@@ -2632,11 +2632,11 @@ exports.Translator = function(rootStcx, ast){
 };
 
 },
-{"../tree_ops":11,"./errors":1,"./handlers":2,"./static_context":4}],
+{"tree_ops":11,"./errors":1,"./handlers":2,"./static_context":4}],
 6:[function(require,module,exports){
 'use strict';
 
-var TreeOps = require('../tree_ops').TreeOps;
+var TreeOps = require('tree_ops').TreeOps;
 
 var ID_REGEX = /[a-zA-Z_0-9\$]/;
 
@@ -2866,7 +2866,7 @@ exports.complete = function(source, ast, rootSctx, pos){
 };
 
 },
-{"../tree_ops":11}],
+{"tree_ops":11}],
 7:[function(require,module,exports){
 exports.StyleChecker = function (ast, source) {
     'use strict';
@@ -48715,7 +48715,7 @@ var XQueryParser = require('./parsers/XQueryParser').XQueryParser;
 var JSONParseTreeHandler = require('./parsers/JSONParseTreeHandler').JSONParseTreeHandler;
 var Translator = require('./compiler/translator').Translator;
 var StyleChecker = require('./formatter/style_checker').StyleChecker;
-var completer = require('../lib/completion/completer');
+var completer = require('lib/completion/completer');
     
 var createStaticContext = exports.createStaticContext = function(){
     var StaticContext = require('./compiler/static_context').StaticContext;
@@ -48827,15 +48827,15 @@ exports.XQLint = function (source, opts) {
 };
 
 },
-{"../lib/completion/completer":6,"./compiler/static_context":4,"./compiler/translator":5,"./formatter/style_checker":7,"./parsers/JSONParseTreeHandler":8,"./parsers/JSONiqParser":9,"./parsers/XQueryParser":10}]},{},[12])(12)
+{"lib/completion/completer":6,"./compiler/static_context":4,"./compiler/translator":5,"./formatter/style_checker":7,"./parsers/JSONParseTreeHandler":8,"./parsers/JSONiqParser":9,"./parsers/XQueryParser":10}]},{},[12])(12)
 
 });
 
 ace.define("ace/mode/xquery_worker",["require","exports","module","ace/lib/oop","ace/worker/mirror","ace/mode/xquery/xqlint"], function(require, exports, module) {
 "use strict";
     
-var oop = require("../lib/oop");
-var Mirror = require("../worker/mirror").Mirror;
+var oop = require("lib/oop");
+var Mirror = require("worker/mirror").Mirror;
 var XQLintLib = require("./xquery/xqlint");
 var XQLint =  XQLintLib.XQLint;
 

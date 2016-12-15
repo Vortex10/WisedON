@@ -1349,9 +1349,9 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -3261,7 +3261,7 @@ module.exports = {
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],"/node_modules/jshint/src/jshint.js":[function(_dereq_,module,exports){
 
-var _            = _dereq_("../lodash");
+var _            = _dereq_("lodash");
 var events       = _dereq_("events");
 var vars         = _dereq_("./vars.js");
 var messages     = _dereq_("./messages.js");
@@ -8169,16 +8169,16 @@ if (typeof exports === "object" && exports) {
   exports.JSHINT = JSHINT;
 }
 
-},{"../lodash":"/node_modules/jshint/lodash.js","./lex.js":"/node_modules/jshint/src/lex.js","./messages.js":"/node_modules/jshint/src/messages.js","./options.js":"/node_modules/jshint/src/options.js","./reg.js":"/node_modules/jshint/src/reg.js","./scope-manager.js":"/node_modules/jshint/src/scope-manager.js","./state.js":"/node_modules/jshint/src/state.js","./style.js":"/node_modules/jshint/src/style.js","./vars.js":"/node_modules/jshint/src/vars.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/lex.js":[function(_dereq_,module,exports){
+},{"lodash":"/node_modules/jshint/lodash.js","./lex.js":"/node_modules/jshint/src/lex.js","./messages.js":"/node_modules/jshint/src/messages.js","./options.js":"/node_modules/jshint/src/options.js","./reg.js":"/node_modules/jshint/src/reg.js","./scope-manager.js":"/node_modules/jshint/src/scope-manager.js","./state.js":"/node_modules/jshint/src/state.js","./style.js":"/node_modules/jshint/src/style.js","./vars.js":"/node_modules/jshint/src/vars.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/lex.js":[function(_dereq_,module,exports){
 
 "use strict";
 
-var _      = _dereq_("../lodash");
+var _      = _dereq_("lodash");
 var events = _dereq_("events");
 var reg    = _dereq_("./reg.js");
 var state  = _dereq_("./state.js").state;
 
-var unicodeData = _dereq_("../data/ascii-identifier-data.js");
+var unicodeData = _dereq_("data/ascii-identifier-data.js");
 var asciiIdentifierStartTable = unicodeData.asciiIdentifierStartTable;
 var asciiIdentifierPartTable = unicodeData.asciiIdentifierPartTable;
 
@@ -9721,10 +9721,10 @@ Lexer.prototype = {
 exports.Lexer = Lexer;
 exports.Context = Context;
 
-},{"../data/ascii-identifier-data.js":"/node_modules/jshint/data/ascii-identifier-data.js","../lodash":"/node_modules/jshint/lodash.js","./reg.js":"/node_modules/jshint/src/reg.js","./state.js":"/node_modules/jshint/src/state.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/messages.js":[function(_dereq_,module,exports){
+},{"data/ascii-identifier-data.js":"/node_modules/jshint/data/ascii-identifier-data.js","lodash":"/node_modules/jshint/lodash.js","./reg.js":"/node_modules/jshint/src/reg.js","./state.js":"/node_modules/jshint/src/state.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/messages.js":[function(_dereq_,module,exports){
 "use strict";
 
-var _ = _dereq_("../lodash");
+var _ = _dereq_("lodash");
 
 var errors = {
   E001: "Bad option: '{a}'.",
@@ -9954,7 +9954,7 @@ _.each(info, function(desc, code) {
   exports.info[code] = { code: code, desc: desc };
 });
 
-},{"../lodash":"/node_modules/jshint/lodash.js"}],"/node_modules/jshint/src/name-stack.js":[function(_dereq_,module,exports){
+},{"lodash":"/node_modules/jshint/lodash.js"}],"/node_modules/jshint/src/name-stack.js":[function(_dereq_,module,exports){
 "use strict";
 
 function NameStack() {
@@ -10164,7 +10164,7 @@ exports.maxlenException = /^(?:(?:\/\/|\/\*|\*) ?)?[^ ]+$/;
 },{}],"/node_modules/jshint/src/scope-manager.js":[function(_dereq_,module,exports){
 "use strict";
 
-var _      = _dereq_("../lodash");
+var _      = _dereq_("lodash");
 var events = _dereq_("events");
 var marker = {};
 var scopeManager = function(state, predefined, exported, declared) {
@@ -10804,7 +10804,7 @@ var scopeManager = function(state, predefined, exported, declared) {
 
 module.exports = scopeManager;
 
-},{"../lodash":"/node_modules/jshint/lodash.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/state.js":[function(_dereq_,module,exports){
+},{"lodash":"/node_modules/jshint/lodash.js","events":"/node_modules/browserify/node_modules/events/events.js"}],"/node_modules/jshint/src/state.js":[function(_dereq_,module,exports){
 "use strict";
 var NameStack = _dereq_("./name-stack.js");
 
@@ -11688,8 +11688,8 @@ exports.jasmine = {
 ace.define("ace/mode/javascript_worker",["require","exports","module","ace/lib/oop","ace/worker/mirror","ace/mode/javascript/jshint"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var Mirror = require("../worker/mirror").Mirror;
+var oop = require("lib/oop");
+var Mirror = require("worker/mirror").Mirror;
 var lint = require("./javascript/jshint").JSHINT;
 
 function startRegex(arr) {

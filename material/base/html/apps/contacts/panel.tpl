@@ -1,4 +1,4 @@
-<header class="slidePanel-header overlay" style="background-image: url('../../../../global/photos/placeholder.png');')">
+<header class="slidePanel-header overlay" style="background-image: url('global/photos/placeholder.png');')">
   <div class="overlay-panel overlay-background vertical-align">
     <div class="slidePanel-actions">
       <div class="btn-group btn-group-flat">
@@ -10,7 +10,7 @@
     </div>
     <div class="vertical-align-middle">
       <a class="avatar" href="javascript:void(0)">
-        <img src="../../../../global/portraits/2.jpg" alt="...">
+        <img src="global/portraits/2.jpg" alt="...">
       </a>
       <h3 class="name">Seevisual</h3>
       <div class="tags">

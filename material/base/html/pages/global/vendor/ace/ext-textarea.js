@@ -124,19 +124,19 @@ background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZ
 }\
 ";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });
 
 ace.define("ace/ext/textarea",["require","exports","module","ace/lib/event","ace/lib/useragent","ace/lib/net","ace/ace","ace/theme/textmate"], function(require, exports, module) {
 "use strict";
 
-var event = require("../lib/event");
-var UA = require("../lib/useragent");
-var net = require("../lib/net");
-var ace = require("../ace");
+var event = require("lib/event");
+var UA = require("lib/useragent");
+var net = require("lib/net");
+var ace = require("ace");
 
-require("../theme/textmate");
+require("theme/textmate");
 
 module.exports = exports = ace;
 var getCSSProperty = function(element, container, property) {

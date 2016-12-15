@@ -13,7 +13,7 @@
   <section class="slidePanel-inner-section">
     <div class="forum-header">
       <a class="avatar" href="javascript:void(0)">
-        <img src="../../../../global/portraits/2.jpg" alt="...">
+        <img src="global/portraits/2.jpg" alt="...">
       </a>
       <span class="name">Seevisual</span>
       <span class="time">3 minutes ago</span>
@@ -59,7 +59,7 @@
         <span class="floor">1</span>
       </div>
       <a class="avatar" href="javascript:void(0)">
-        <img src="../../../../global/portraits/2.jpg" alt="...">
+        <img src="global/portraits/2.jpg" alt="...">
       </a>
       <span class="name">Seevisual</span>
       <span class="time">2 minutes ago</span>

@@ -1,7 +1,7 @@
 ace.define("ace/mode/assembly_x86_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var AssemblyX86HighlightRules = function() {
@@ -78,9 +78,9 @@ exports.AssemblyX86HighlightRules = AssemblyX86HighlightRules;
 ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
+var oop = require("lib/oop");
 var BaseFoldMode = require("./fold_mode").FoldMode;
-var Range = require("../../range").Range;
+var Range = require("range").Range;
 
 var FoldMode = exports.FoldMode = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
@@ -165,7 +165,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/assembly_x86",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/assembly_x86_highlight_rules","ace/mode/folding/coffee"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var AssemblyX86HighlightRules = require("./assembly_x86_highlight_rules").AssemblyX86HighlightRules;
 var FoldMode = require("./folding/coffee").FoldMode;

@@ -1,6 +1,6 @@
 ace.define("ace/ext/menu_tools/overlay_page",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 'use strict';
-var dom = require("../../lib/dom");
+var dom = require("lib/dom");
 var cssText = "#ace_settingsmenu, #kbshortcutmenu {\
 background-color: #F7F7F7;\
 color: black;\
@@ -101,7 +101,7 @@ module.exports.overlayPage = function overlayPage(editor, contentElement, top, r
 
 ace.define("ace/ext/menu_tools/get_editor_keyboard_shortcuts",["require","exports","module","ace/lib/keys"], function(require, exports, module) {
 "use strict";
-var keys = require("../../lib/keys");
+var keys = require("lib/keys");
 module.exports.getEditorKeybordShortcuts = function(editor) {
     var KEY_MODS = keys.KEY_MODS;
     var keybindings = [];

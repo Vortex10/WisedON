@@ -1,7 +1,7 @@
 ace.define("ace/mode/doc_comment_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var DocCommentHighlightRules = function() {
@@ -50,8 +50,8 @@ exports.DocCommentHighlightRules = DocCommentHighlightRules;
 
 ace.define("ace/mode/mysql_highlight_rules",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/mode/doc_comment_highlight_rules","ace/mode/text_highlight_rules"], function(require, exports, module) {
 
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
+var oop = require("lib/oop");
+var lang = require("lib/lang");
 var DocCommentHighlightRules = require("./doc_comment_highlight_rules").DocCommentHighlightRules;
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
@@ -139,10 +139,10 @@ exports.MysqlHighlightRules = MysqlHighlightRules;
 
 ace.define("ace/mode/mysql",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/mysql_highlight_rules","ace/range"], function(require, exports, module) {
 
-var oop = require("../lib/oop");
-var TextMode = require("../mode/text").Mode;
+var oop = require("lib/oop");
+var TextMode = require("mode/text").Mode;
 var MysqlHighlightRules = require("./mysql_highlight_rules").MysqlHighlightRules;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var Mode = function() {
     this.HighlightRules = MysqlHighlightRules;

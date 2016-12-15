@@ -2,10 +2,10 @@ var gulp         = require('gulp');
 var jshint       = require('gulp-jshint');
 
 // config
-var config = require('../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../options/jshint');
+var options = require('options/jshint');
 
 
 module.exports = function () {

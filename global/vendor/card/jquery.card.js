@@ -1719,7 +1719,7 @@ module.exports.byUrl = function(url) {
 (function (global){
 var Card, QJ, extend, payment;
 
-_dereq_('../scss/card.scss');
+_dereq_('scss/card.scss');
 
 QJ = _dereq_('qj/src/qj.coffee');
 
@@ -2034,7 +2034,7 @@ global.Card = Card;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../scss/card.scss":10,"node.extend":1,"payment/src/payment":4,"qj/src/qj.coffee":5}],9:[function(_dereq_,module,exports){
+},{"scss/card.scss":10,"node.extend":1,"payment/src/payment":4,"qj/src/qj.coffee":5}],9:[function(_dereq_,module,exports){
 var $, Card,
   slice = [].slice;
 

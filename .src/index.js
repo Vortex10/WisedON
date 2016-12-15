@@ -549,27 +549,27 @@ inquirer.prompt( questions).then(function( answers ) {
         var applause = Applause.create({
           patterns: [
             {
-              match: '../global/css',
+              match: 'global/css',
               replacement: 'assets/css'
             },
             {
-              match: '../global/fonts',
+              match: 'global/fonts',
               replacement: 'assets/fonts'
             },
             {
-              match: '../global/photos',
+              match: 'global/photos',
               replacement: 'assets/photos'
             },
             {
-              match: '../global/js',
+              match: 'global/js',
               replacement: 'assets/js'
             },
             {
-              match: '../global/portraits',
+              match: 'global/portraits',
               replacement: 'assets/portraits'
             },
             {
-              match: '../global/vendor',
+              match: 'global/vendor',
               replacement: 'assets/vendor'
             }
           ],

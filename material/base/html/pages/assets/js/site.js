@@ -13,7 +13,7 @@
   $.configs.set('site', {
     fontFamily: "Noto Sans, sans-serif",
     primaryColor: "indigo",
-    assets: "../assets"
+    assets: "assets"
   });
 
   window.Site = $.site.extend({

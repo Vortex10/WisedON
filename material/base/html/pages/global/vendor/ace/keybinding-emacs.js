@@ -108,8 +108,8 @@ exports.Occur = Occur;
 
 ace.define("ace/commands/occur_commands",["require","exports","module","ace/config","ace/occur","ace/keyboard/hash_handler","ace/lib/oop"], function(require, exports, module) {
 
-var config = require("../config"),
-    Occur = require("../occur").Occur;
+var config = require("config"),
+    Occur = require("occur").Occur;
 var occurStartCommand = {
     name: "occur",
     exec: function(editor, options) {
@@ -143,8 +143,8 @@ var occurCommands = [{
     readOnly: true
 }];
 
-var HashHandler = require("../keyboard/hash_handler").HashHandler;
-var oop = require("../lib/oop");
+var HashHandler = require("keyboard/hash_handler").HashHandler;
+var oop = require("lib/oop");
 
 
 function OccurKeyboardHandler() {}
@@ -187,9 +187,9 @@ exports.occurStartCommand = occurStartCommand;
 
 ace.define("ace/commands/incremental_search_commands",["require","exports","module","ace/config","ace/lib/oop","ace/keyboard/hash_handler","ace/commands/occur_commands"], function(require, exports, module) {
 
-var config = require("../config");
-var oop = require("../lib/oop");
-var HashHandler = require("../keyboard/hash_handler").HashHandler;
+var config = require("config");
+var oop = require("lib/oop");
+var HashHandler = require("keyboard/hash_handler").HashHandler;
 var occurStartCommand = require("./occur_commands").occurStartCommand;
 exports.iSearchStartCommands = [{
     name: "iSearch",
@@ -607,9 +607,9 @@ require("./config").defineOptions(Editor.prototype, "editor", {
 ace.define("ace/keyboard/emacs",["require","exports","module","ace/lib/dom","ace/incremental_search","ace/commands/incremental_search_commands","ace/keyboard/hash_handler","ace/lib/keys"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
-require("../incremental_search");
-var iSearchCommandModule = require("../commands/incremental_search_commands");
+var dom = require("lib/dom");
+require("incremental_search");
+var iSearchCommandModule = require("commands/incremental_search_commands");
 
 
 var screenToTextBlockCoordinates = function(x, y) {
@@ -759,7 +759,7 @@ var $resetMarkMode = function(e) {
     e.editor.session.$emacsMark = null;
 };
 
-var keys = require("../lib/keys").KEY_MODS;
+var keys = require("lib/keys").KEY_MODS;
 var eMods = {C: "ctrl", S: "shift", M: "alt", CMD: "command"};
 var combinations = ["C-S-M-CMD",
                     "S-M-CMD", "C-M-CMD", "C-S-CMD", "C-S-M",

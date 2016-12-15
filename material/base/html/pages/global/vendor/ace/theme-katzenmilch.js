@@ -116,6 +116,6 @@ color: #3976a2;\
 rbackground-color: rgba(73, 166, 210, 0.039)\
 }";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });

@@ -1,7 +1,7 @@
 ace.define("ace/mode/logiql_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var LogiQLHighlightRules = function() {
@@ -75,9 +75,9 @@ exports.LogiQLHighlightRules = LogiQLHighlightRules;
 ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
+var oop = require("lib/oop");
 var BaseFoldMode = require("./fold_mode").FoldMode;
-var Range = require("../../range").Range;
+var Range = require("range").Range;
 
 var FoldMode = exports.FoldMode = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
@@ -162,10 +162,10 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/behaviour/cstyle",["require","exports","module","ace/lib/oop","ace/mode/behaviour","ace/token_iterator","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Behaviour = require("../behaviour").Behaviour;
-var TokenIterator = require("../../token_iterator").TokenIterator;
-var lang = require("../../lib/lang");
+var oop = require("lib/oop");
+var Behaviour = require("behaviour").Behaviour;
+var TokenIterator = require("token_iterator").TokenIterator;
+var lang = require("lib/lang");
 
 var SAFE_INSERT_IN_TOKENS =
     ["text", "paren.rparen", "punctuation.operator"];
@@ -519,7 +519,7 @@ exports.CstyleBehaviour = CstyleBehaviour;
 ace.define("ace/mode/matching_brace_outdent",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var MatchingBraceOutdent = function() {};
 
@@ -559,12 +559,12 @@ exports.MatchingBraceOutdent = MatchingBraceOutdent;
 ace.define("ace/mode/logiql",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/logiql_highlight_rules","ace/mode/folding/coffee","ace/token_iterator","ace/range","ace/mode/behaviour/cstyle","ace/mode/matching_brace_outdent"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var LogiQLHighlightRules = require("./logiql_highlight_rules").LogiQLHighlightRules;
 var FoldMode = require("./folding/coffee").FoldMode;
-var TokenIterator = require("../token_iterator").TokenIterator;
-var Range = require("../range").Range;
+var TokenIterator = require("token_iterator").TokenIterator;
+var Range = require("range").Range;
 var CstyleBehaviour = require("./behaviour/cstyle").CstyleBehaviour;
 var MatchingBraceOutdent = require("./matching_brace_outdent").MatchingBraceOutdent;
 

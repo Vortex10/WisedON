@@ -1,9 +1,9 @@
 ace.define("ace/ext/searchbox",["require","exports","module","ace/lib/dom","ace/lib/lang","ace/lib/event","ace/keyboard/hash_handler","ace/lib/keys"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
-var lang = require("../lib/lang");
-var event = require("../lib/event");
+var dom = require("lib/dom");
+var lang = require("lib/lang");
+var event = require("lib/event");
 var searchboxCss = "\
 .ace_search {\
 background-color: #ddd;\
@@ -146,8 +146,8 @@ text-align: right;\
 -ms-user-select: none;\
 user-select: none;\
 }";
-var HashHandler = require("../keyboard/hash_handler").HashHandler;
-var keyUtil = require("../lib/keys");
+var HashHandler = require("keyboard/hash_handler").HashHandler;
+var keyUtil = require("lib/keys");
 
 dom.importCssString(searchboxCss, "ace_searchbox");
 

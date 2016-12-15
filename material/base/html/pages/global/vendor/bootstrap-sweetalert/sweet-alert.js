@@ -191,7 +191,7 @@
 
     // For development use only!
     /*jQuery.ajax({
-      url: '../lib/sweet-alert.html', // Change path depending on file location
+      url: 'lib/sweet-alert.html', // Change path depending on file location
       dataType: 'html'
     })
     .done(function(html) {

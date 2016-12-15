@@ -1,7 +1,7 @@
 ace.define("ace/mode/fortran_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var FortranHighlightRules = function() {
@@ -203,8 +203,8 @@ exports.FortranHighlightRules = FortranHighlightRules;
 ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../../lib/oop");
-var Range = require("../../range").Range;
+var oop = require("lib/oop");
+var Range = require("range").Range;
 var BaseFoldMode = require("./fold_mode").FoldMode;
 
 var FoldMode = exports.FoldMode = function(commentRegex) {
@@ -343,11 +343,11 @@ oop.inherits(FoldMode, BaseFoldMode);
 ace.define("ace/mode/fortran",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/fortran_highlight_rules","ace/mode/folding/cstyle","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var FortranHighlightRules = require("./fortran_highlight_rules").FortranHighlightRules;
 var CStyleFoldMode = require("./folding/cstyle").FoldMode;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var Mode = function() {
     this.HighlightRules = FortranHighlightRules;

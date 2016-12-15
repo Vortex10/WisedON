@@ -150,7 +150,7 @@ color: #000;\
 }\
 ";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 
 });

@@ -1,6 +1,6 @@
 ace.define("ace/ext/spellcheck",["require","exports","module","ace/lib/event","ace/editor","ace/config"], function(require, exports, module) {
 "use strict";
-var event = require("../lib/event");
+var event = require("lib/event");
 
 exports.contextMenuHandler = function(e){
     var host = e.target;
@@ -49,8 +49,8 @@ exports.contextMenuHandler = function(e){
         return newVal;
     });
 };
-var Editor = require("../editor").Editor;
-require("../config").defineOptions(Editor.prototype, "editor", {
+var Editor = require("editor").Editor;
+require("config").defineOptions(Editor.prototype, "editor", {
     spellcheck: {
         set: function(val) {
             var text = this.textInput.getElement();

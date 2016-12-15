@@ -313,8 +313,8 @@ exports.themes = themeData.map(function(data) {
 ace.define("ace/ext/menu_tools/add_editor_menu_options",["require","exports","module","ace/ext/modelist","ace/ext/themelist"], function(require, exports, module) {
 'use strict';
 module.exports.addEditorMenuOptions = function addEditorMenuOptions (editor) {
-    var modelist = require('../modelist');
-    var themelist = require('../themelist');
+    var modelist = require('modelist');
+    var themelist = require('themelist');
     editor.menuOptions = {
         setNewLineMode: [{
             textContent: "unix",
@@ -428,7 +428,7 @@ module.exports.generateSettingsMenu = function generateSettingsMenu (editor) {
         });
         
         var el = topmenu.appendChild(document.createElement('div'));
-        var version = require("../../ace").version;
+        var version = require("ace").version;
         el.style.padding = "1em";
         el.textContent = "Ace version " + version;
         
@@ -533,7 +533,7 @@ module.exports.generateSettingsMenu = function generateSettingsMenu (editor) {
 
 ace.define("ace/ext/menu_tools/overlay_page",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 'use strict';
-var dom = require("../../lib/dom");
+var dom = require("lib/dom");
 var cssText = "#ace_settingsmenu, #kbshortcutmenu {\
 background-color: #F7F7F7;\
 color: black;\

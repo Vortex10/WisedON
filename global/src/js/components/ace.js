@@ -4,7 +4,7 @@ $.components.register("ace", {
   init: function(context) {
     if (typeof ace === "undefined") return;
 
-    //ace.config.set("themePath", "../theme");
+    //ace.config.set("themePath", "theme");
     ace.config.loadModule("ace/ext/language_tools");
 
     $('[data-plugin="ace"]', context).each(function() {

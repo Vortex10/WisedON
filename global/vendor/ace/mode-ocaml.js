@@ -1,7 +1,7 @@
 ace.define("ace/mode/ocaml_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var OcamlHighlightRules = function() {
@@ -309,7 +309,7 @@ exports.OcamlHighlightRules = OcamlHighlightRules;
 ace.define("ace/mode/matching_brace_outdent",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var MatchingBraceOutdent = function() {};
 
@@ -349,11 +349,11 @@ exports.MatchingBraceOutdent = MatchingBraceOutdent;
 ace.define("ace/mode/ocaml",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/ocaml_highlight_rules","ace/mode/matching_brace_outdent","ace/range"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
+var oop = require("lib/oop");
 var TextMode = require("./text").Mode;
 var OcamlHighlightRules = require("./ocaml_highlight_rules").OcamlHighlightRules;
 var MatchingBraceOutdent = require("./matching_brace_outdent").MatchingBraceOutdent;
-var Range = require("../range").Range;
+var Range = require("range").Range;
 
 var Mode = function() {
     this.HighlightRules = OcamlHighlightRules;

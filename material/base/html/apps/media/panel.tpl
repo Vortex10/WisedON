@@ -1,4 +1,4 @@
-<header class="slidePanel-header overlay" style="background-image: url('../../../../global/photos/placeholder.png');"
+<header class="slidePanel-header overlay" style="background-image: url('global/photos/placeholder.png');"
 data-method="scroll" data-min="50">
   <div class="overlay-top overlay-panel overlay-background">
     <div class="slidePanel-actions btn-group btn-group-flat" aria-label="actions" role="group">
@@ -42,7 +42,7 @@ data-method="scroll" data-min="50">
         <div class="time">3 minutes ago</div>
       </div>
       <a class="avatar margin-right-10" href="javascript:void(0)">
-        <img src="../../../../global/portraits/2.jpg" alt="...">
+        <img src="global/portraits/2.jpg" alt="...">
       </a>
       <span class="name">Seevisual</span>
     </div>

@@ -1349,9 +1349,9 @@ exports.Document = Document;
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -6895,7 +6895,7 @@ module.exports={
 {}],
 9:[function(_dereq_,module,exports){
 var SAXTreeBuilder = _dereq_('./SAXTreeBuilder').SAXTreeBuilder;
-var Tokenizer = _dereq_('../Tokenizer').Tokenizer;
+var Tokenizer = _dereq_('Tokenizer').Tokenizer;
 var TreeParser = _dereq_('./TreeParser').TreeParser;
 
 function SAXParser() {
@@ -6946,10 +6946,10 @@ Object.defineProperty(SAXParser.prototype, 'errorHandler', {
 exports.SAXParser = SAXParser;
 
 },
-{"../Tokenizer":5,"./SAXTreeBuilder":10,"./TreeParser":11}],
+{"Tokenizer":5,"./SAXTreeBuilder":10,"./TreeParser":11}],
 10:[function(_dereq_,module,exports){
 var util = _dereq_('util');
-var TreeBuilder = _dereq_('../TreeBuilder').TreeBuilder;
+var TreeBuilder = _dereq_('TreeBuilder').TreeBuilder;
 
 function SAXTreeBuilder() {
 	TreeBuilder.call(this);
@@ -7357,7 +7357,7 @@ DTD.prototype.revisit = function(treeParser) {
 exports.SAXTreeBuilder = SAXTreeBuilder;
 
 },
-{"../TreeBuilder":6,"util":20}],
+{"TreeBuilder":6,"util":20}],
 11:[function(_dereq_,module,exports){
 function TreeParser(contentHandler, lexicalHandler){
 	this.contentHandler;
@@ -10849,9 +10849,9 @@ module.exports=_dereq_(15)
 ace.define("ace/mode/html_worker",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/worker/mirror","ace/mode/html/saxparser"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
-var Mirror = require("../worker/mirror").Mirror;
+var oop = require("lib/oop");
+var lang = require("lib/lang");
+var Mirror = require("worker/mirror").Mirror;
 var SAXParser = require("./html/saxparser").SAXParser;
 
 var errorTypes = {

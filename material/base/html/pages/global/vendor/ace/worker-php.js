@@ -1349,9 +1349,9 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/worker/mirror",["require","exports","module","ace/range","ace/document","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var Document = require("../document").Document;
-var lang = require("../lib/lang");
+var Range = require("range").Range;
+var Document = require("document").Document;
+var lang = require("lib/lang");
     
 var Mirror = exports.Mirror = function(sender) {
     this.sender = sender;
@@ -6282,8 +6282,8 @@ exports.PHP = PHP;
 ace.define("ace/mode/php_worker",["require","exports","module","ace/lib/oop","ace/worker/mirror","ace/mode/php/php"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var Mirror = require("../worker/mirror").Mirror;
+var oop = require("lib/oop");
+var Mirror = require("worker/mirror").Mirror;
 var PHP = require("./php/php").PHP;
 
 var PhpWorker = exports.PhpWorker = function(sender) {

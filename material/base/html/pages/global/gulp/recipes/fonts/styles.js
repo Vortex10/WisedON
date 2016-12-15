@@ -7,10 +7,10 @@ var rename       = require("gulp-rename");
 var plumber      = require('gulp-plumber');
 
 // config
-var config = require('../../../config.json');
+var config = require('config.json');
 
 // options
-var options = require('../../options/fonts');
+var options = require('options/fonts');
 
 module.exports = function () {
   return gulp.src([config.source.fonts  + '/*/*.less', '!' + config.source.fonts  + '/*/_*.less'])

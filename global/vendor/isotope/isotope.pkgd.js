@@ -3438,14 +3438,14 @@ return Item;
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope/js/layout-modes/masonry',[
-        '../layout-mode',
+        'layout-mode',
         'masonry/masonry'
       ],
       factory );
   } else if ( typeof exports == 'object' ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode'),
+      require('layout-mode'),
       require('masonry-layout')
     );
   } else {
@@ -3516,13 +3516,13 @@ function extend( a, b ) {
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope/js/layout-modes/fit-rows',[
-        '../layout-mode'
+        'layout-mode'
       ],
       factory );
   } else if ( typeof exports == 'object' ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode')
+      require('layout-mode')
     );
   } else {
     // browser global
@@ -3583,13 +3583,13 @@ return FitRows;
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope/js/layout-modes/vertical',[
-        '../layout-mode'
+        'layout-mode'
       ],
       factory );
   } else if ( typeof exports == 'object' ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode')
+      require('layout-mode')
     );
   } else {
     // browser global

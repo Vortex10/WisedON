@@ -816,22 +816,22 @@ var EXTRA_PARENT_PATHS_RE = /^(?:\.\.\/)*(?:\.\.$)?/;
  * .. sequences that would take it above the root of the current parent
  * directory.
  * {@updoc
- *  $ collapse_dots('foo/../bar')
+ *  $ collapse_dots('foo/bar')
  *  # 'bar'
  *  $ collapse_dots('foo/./bar')
  *  # 'foo/bar'
- *  $ collapse_dots('foo/../bar/./../../baz')
+ *  $ collapse_dots('foo/bar/./baz')
  *  # 'baz'
- *  $ collapse_dots('../foo')
- *  # '../foo'
- *  $ collapse_dots('../foo').replace(EXTRA_PARENT_PATHS_RE, '')
+ *  $ collapse_dots('foo')
+ *  # 'foo'
+ *  $ collapse_dots('foo').replace(EXTRA_PARENT_PATHS_RE, '')
  *  # 'foo'
  * }
  */
 function collapse_dots(path) {
   if (path === null) { return null; }
   var p = normPath(path);
-  // Only /../ left to flatten
+  // Only / left to flatten
   var r = PARENT_DIRECTORY_HANDLER_RE;
   // We replace with $1 which matches a / before the .. because this
   // guarantees that:
@@ -3321,7 +3321,7 @@ module.exports = new Feedback();
 'use strict';
 
 var config = require('./config'),
-    version = require('../package.json').version;
+    version = require('package.json').version;
 
 module.exports = function(path, accessToken) {
     accessToken = accessToken || L.mapbox.accessToken;
@@ -3362,7 +3362,7 @@ module.exports.tileJSON = function(urlOrMapID, accessToken) {
     return url;
 };
 
-},{"../package.json":6,"./config":7}],11:[function(require,module,exports){
+},{"package.json":6,"./config":7}],11:[function(require,module,exports){
 'use strict';
 
 var isArray = require('isarray'),
@@ -4599,7 +4599,7 @@ var geocoderControl = require('./geocoder_control'),
     gridLayer = require('./grid_layer');
 
 L.mapbox = module.exports = {
-    VERSION: require('../package.json').version,
+    VERSION: require('package.json').version,
     geocoder: require('./geocoder'),
     marker: require('./marker'),
     simplestyle: require('./simplestyle'),
@@ -4636,9 +4636,9 @@ window.L.Icon.Default.imagePath =
     ((document.location.protocol === 'https:' ||
     document.location.protocol === 'http:') ? '' : 'https:') +
     '//api.tiles.mapbox.com/mapbox.js/' + 'v' +
-    require('../package.json').version + '/images';
+    require('package.json').version + '/images';
 
-},{"../package.json":6,"./config":7,"./feature_layer":8,"./feedback":9,"./geocoder":11,"./geocoder_control":12,"./grid_control":14,"./grid_layer":15,"./info_control":16,"./legend_control":17,"./map":19,"./marker":22,"./share_control":24,"./simplestyle":25,"./tile_layer":26,"mustache":3,"sanitize-caja":4}],21:[function(require,module,exports){
+},{"package.json":6,"./config":7,"./feature_layer":8,"./feedback":9,"./geocoder":11,"./geocoder_control":12,"./grid_control":14,"./grid_layer":15,"./info_control":16,"./legend_control":17,"./map":19,"./marker":22,"./share_control":24,"./simplestyle":25,"./tile_layer":26,"mustache":3,"sanitize-caja":4}],21:[function(require,module,exports){
 'use strict';
 
 var MapboxLogoControl = L.Control.extend({

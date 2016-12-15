@@ -1935,10 +1935,10 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 ace.define("ace/keyboard/textinput",["require","exports","module","ace/lib/event","ace/lib/useragent","ace/lib/dom","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
-var dom = require("../lib/dom");
-var lang = require("../lib/lang");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
+var dom = require("lib/dom");
+var lang = require("lib/lang");
 var BROKEN_SETDATA = useragent.isChrome < 18;
 var USE_IE_MIME_TYPE =  useragent.isIE;
 
@@ -2395,9 +2395,9 @@ exports.TextInput = TextInput;
 ace.define("ace/mouse/default_handlers",["require","exports","module","ace/lib/dom","ace/lib/event","ace/lib/useragent"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
+var dom = require("lib/dom");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
 
 var DRAG_OFFSET = 0; // pixels
 
@@ -2717,10 +2717,10 @@ exports.Tooltip = Tooltip;
 
 ace.define("ace/mouse/default_gutter_handler",["require","exports","module","ace/lib/dom","ace/lib/oop","ace/lib/event","ace/tooltip"], function(require, exports, module) {
 "use strict";
-var dom = require("../lib/dom");
-var oop = require("../lib/oop");
-var event = require("../lib/event");
-var Tooltip = require("../tooltip").Tooltip;
+var dom = require("lib/dom");
+var oop = require("lib/oop");
+var event = require("lib/event");
+var Tooltip = require("tooltip").Tooltip;
 
 function GutterHandler(mouseHandler) {
     var editor = mouseHandler.editor;
@@ -2870,8 +2870,8 @@ exports.GutterHandler = GutterHandler;
 ace.define("ace/mouse/mouse_event",["require","exports","module","ace/lib/event","ace/lib/useragent"], function(require, exports, module) {
 "use strict";
 
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
 var MouseEvent = exports.MouseEvent = function(domEvent, editor) {
     this.domEvent = domEvent;
     this.editor = editor;
@@ -2944,9 +2944,9 @@ var MouseEvent = exports.MouseEvent = function(domEvent, editor) {
 ace.define("ace/mouse/dragdrop_handler",["require","exports","module","ace/lib/dom","ace/lib/event","ace/lib/useragent"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
+var dom = require("lib/dom");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
 
 var AUTOSCROLL_DELAY = 200;
 var SCROLL_CURSOR_DELAY = 200;
@@ -3777,13 +3777,13 @@ function deHyphenate(str) {
 ace.define("ace/mouse/mouse_handler",["require","exports","module","ace/lib/event","ace/lib/useragent","ace/mouse/default_handlers","ace/mouse/default_gutter_handler","ace/mouse/mouse_event","ace/mouse/dragdrop_handler","ace/config"], function(require, exports, module) {
 "use strict";
 
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
 var DefaultHandlers = require("./default_handlers").DefaultHandlers;
 var DefaultGutterHandler = require("./default_gutter_handler").GutterHandler;
 var MouseEvent = require("./mouse_event").MouseEvent;
 var DragdropHandler = require("./dragdrop_handler").DragdropHandler;
-var config = require("../config");
+var config = require("config");
 
 var MouseHandler = function(editor) {
     var _self = this;
@@ -4016,8 +4016,8 @@ exports.FoldHandler = FoldHandler;
 ace.define("ace/keyboard/keybinding",["require","exports","module","ace/lib/keys","ace/lib/event"], function(require, exports, module) {
 "use strict";
 
-var keyUtil  = require("../lib/keys");
-var event = require("../lib/event");
+var keyUtil  = require("lib/keys");
+var event = require("lib/event");
 
 var KeyBinding = function(editor) {
     this.$editor = editor;
@@ -5295,7 +5295,7 @@ exports.Tokenizer = Tokenizer;
 ace.define("ace/mode/text_highlight_rules",["require","exports","module","ace/lib/lang"], function(require, exports, module) {
 "use strict";
 
-var lang = require("../lib/lang");
+var lang = require("lib/lang");
 
 var TextHighlightRules = function() {
 
@@ -5687,13 +5687,13 @@ exports.TokenIterator = TokenIterator;
 ace.define("ace/mode/text",["require","exports","module","ace/tokenizer","ace/mode/text_highlight_rules","ace/mode/behaviour","ace/unicode","ace/lib/lang","ace/token_iterator","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Tokenizer = require("../tokenizer").Tokenizer;
+var Tokenizer = require("tokenizer").Tokenizer;
 var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 var Behaviour = require("./behaviour").Behaviour;
-var unicode = require("../unicode");
-var lang = require("../lib/lang");
-var TokenIterator = require("../token_iterator").TokenIterator;
-var Range = require("../range").Range;
+var unicode = require("unicode");
+var lang = require("lib/lang");
+var TokenIterator = require("token_iterator").TokenIterator;
+var Range = require("range").Range;
 
 var Mode = function() {
     this.HighlightRules = TextHighlightRules;
@@ -6782,7 +6782,7 @@ exports.SearchHighlight = SearchHighlight;
 ace.define("ace/edit_session/fold_line",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 function FoldLine(foldData, folds) {
     this.foldData = foldData;
     if (Array.isArray(folds)) {
@@ -7207,9 +7207,9 @@ exports.RangeList = RangeList;
 ace.define("ace/edit_session/fold",["require","exports","module","ace/range","ace/range_list","ace/lib/oop"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var RangeList = require("../range_list").RangeList;
-var oop = require("../lib/oop")
+var Range = require("range").Range;
+var RangeList = require("range_list").RangeList;
+var oop = require("lib/oop")
 var Fold = exports.Fold = function(range, placeholder) {
     this.foldLine = null;
     this.placeholder = placeholder;
@@ -7311,10 +7311,10 @@ function restoreRange(range, anchor) {
 ace.define("ace/edit_session/folding",["require","exports","module","ace/range","ace/edit_session/fold_line","ace/edit_session/fold","ace/token_iterator"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
+var Range = require("range").Range;
 var FoldLine = require("./fold_line").FoldLine;
 var Fold = require("./fold").Fold;
-var TokenIterator = require("../token_iterator").TokenIterator;
+var TokenIterator = require("token_iterator").TokenIterator;
 
 function Folding() {
     this.getFoldAt = function(row, column, side) {
@@ -8047,8 +8047,8 @@ exports.Folding = Folding;
 ace.define("ace/edit_session/bracket_match",["require","exports","module","ace/token_iterator","ace/range"], function(require, exports, module) {
 "use strict";
 
-var TokenIterator = require("../token_iterator").TokenIterator;
-var Range = require("../range").Range;
+var TokenIterator = require("token_iterator").TokenIterator;
+var Range = require("range").Range;
 
 
 function BracketMatch() {
@@ -10280,8 +10280,8 @@ exports.Search = Search;
 ace.define("ace/keyboard/hash_handler",["require","exports","module","ace/lib/keys","ace/lib/useragent"], function(require, exports, module) {
 "use strict";
 
-var keyUtil = require("../lib/keys");
-var useragent = require("../lib/useragent");
+var keyUtil = require("lib/keys");
+var useragent = require("lib/useragent");
 var KEY_MODS = keyUtil.KEY_MODS;
 
 function HashHandler(config, platform) {
@@ -10502,9 +10502,9 @@ exports.MultiHashHandler = MultiHashHandler;
 ace.define("ace/commands/command_manager",["require","exports","module","ace/lib/oop","ace/keyboard/hash_handler","ace/lib/event_emitter"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var MultiHashHandler = require("../keyboard/hash_handler").MultiHashHandler;
-var EventEmitter = require("../lib/event_emitter").EventEmitter;
+var oop = require("lib/oop");
+var MultiHashHandler = require("keyboard/hash_handler").MultiHashHandler;
+var EventEmitter = require("lib/event_emitter").EventEmitter;
 
 var CommandManager = function(platform, commands) {
     MultiHashHandler.call(this, commands, platform);
@@ -10609,9 +10609,9 @@ exports.CommandManager = CommandManager;
 ace.define("ace/commands/default_commands",["require","exports","module","ace/lib/lang","ace/config","ace/range"], function(require, exports, module) {
 "use strict";
 
-var lang = require("../lib/lang");
-var config = require("../config");
-var Range = require("../range").Range;
+var lang = require("lib/lang");
+var config = require("config");
+var Range = require("range").Range;
 
 function bindKey(win, mac) {
     return {win: win, mac: mac};
@@ -13254,10 +13254,10 @@ exports.UndoManager = UndoManager;
 ace.define("ace/layer/gutter",["require","exports","module","ace/lib/dom","ace/lib/oop","ace/lib/lang","ace/lib/event_emitter"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
-var oop = require("../lib/oop");
-var lang = require("../lib/lang");
-var EventEmitter = require("../lib/event_emitter").EventEmitter;
+var dom = require("lib/dom");
+var oop = require("lib/oop");
+var lang = require("lib/lang");
+var EventEmitter = require("lib/event_emitter").EventEmitter;
 
 var Gutter = function(parentEl) {
     this.element = dom.createElement("div");
@@ -13507,8 +13507,8 @@ exports.Gutter = Gutter;
 ace.define("ace/layer/marker",["require","exports","module","ace/range","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../range").Range;
-var dom = require("../lib/dom");
+var Range = require("range").Range;
+var dom = require("lib/dom");
 
 var Marker = function(parentEl) {
     this.element = dom.createElement("div");
@@ -13691,11 +13691,11 @@ exports.Marker = Marker;
 ace.define("ace/layer/text",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/lib/useragent","ace/lib/event_emitter"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var dom = require("../lib/dom");
-var lang = require("../lib/lang");
-var useragent = require("../lib/useragent");
-var EventEmitter = require("../lib/event_emitter").EventEmitter;
+var oop = require("lib/oop");
+var dom = require("lib/dom");
+var lang = require("lib/lang");
+var useragent = require("lib/useragent");
+var EventEmitter = require("lib/event_emitter").EventEmitter;
 
 var Text = function(parentEl) {
     this.element = dom.createElement("div");
@@ -14225,7 +14225,7 @@ exports.Text = Text;
 ace.define("ace/layer/cursor",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 var isIE8;
 
 var Cursor = function(parentEl) {
@@ -14593,11 +14593,11 @@ exports.RenderLoop = RenderLoop;
 
 ace.define("ace/layer/font_metrics",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/lib/useragent","ace/lib/event_emitter"], function(require, exports, module) {
 
-var oop = require("../lib/oop");
-var dom = require("../lib/dom");
-var lang = require("../lib/lang");
-var useragent = require("../lib/useragent");
-var EventEmitter = require("../lib/event_emitter").EventEmitter;
+var oop = require("lib/oop");
+var dom = require("lib/dom");
+var lang = require("lib/lang");
+var useragent = require("lib/useragent");
+var EventEmitter = require("lib/event_emitter").EventEmitter;
 
 var CHAR_COUNT = 0;
 
@@ -16393,10 +16393,10 @@ exports.VirtualRenderer = VirtualRenderer;
 ace.define("ace/worker/worker_client",["require","exports","module","ace/lib/oop","ace/lib/net","ace/lib/event_emitter","ace/config"], function(require, exports, module) {
 "use strict";
 
-var oop = require("../lib/oop");
-var net = require("../lib/net");
-var EventEmitter = require("../lib/event_emitter").EventEmitter;
-var config = require("../config");
+var oop = require("lib/oop");
+var net = require("lib/net");
+var EventEmitter = require("lib/event_emitter").EventEmitter;
+var config = require("config");
 
 var WorkerClient = function(topLevelNamespaces, mod, classname, workerUrl) {
     this.$sendDeltaQueue = this.$sendDeltaQueue.bind(this);
@@ -16782,8 +16782,8 @@ exports.PlaceHolder = PlaceHolder;
 
 ace.define("ace/mouse/multi_select_handler",["require","exports","module","ace/lib/event","ace/lib/useragent"], function(require, exports, module) {
 
-var event = require("../lib/event");
-var useragent = require("../lib/useragent");
+var event = require("lib/event");
+var useragent = require("lib/useragent");
 function isSamePoint(p1, p2) {
     return p1.row == p2.row && p1.column == p2.column;
 }
@@ -17035,7 +17035,7 @@ exports.multiSelectCommands = [{
     isAvailable: function(editor) {return editor && editor.inMultiSelectMode}
 }];
 
-var HashHandler = require("../keyboard/hash_handler").HashHandler;
+var HashHandler = require("keyboard/hash_handler").HashHandler;
 exports.keyboardHandler = new HashHandler(exports.multiSelectCommands);
 
 });
@@ -17849,7 +17849,7 @@ require("./config").defineOptions(Editor.prototype, "editor", {
 ace.define("ace/mode/folding/fold_mode",["require","exports","module","ace/range"], function(require, exports, module) {
 "use strict";
 
-var Range = require("../../range").Range;
+var Range = require("range").Range;
 
 var FoldMode = exports.FoldMode = function() {};
 
@@ -18061,7 +18061,7 @@ background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZ
 }\
 ";
 
-var dom = require("../lib/dom");
+var dom = require("lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass);
 });
 
@@ -18419,9 +18419,9 @@ exports.LineWidgets = LineWidgets;
 
 ace.define("ace/ext/error_marker",["require","exports","module","ace/line_widgets","ace/lib/dom","ace/range"], function(require, exports, module) {
 "use strict";
-var LineWidgets = require("../line_widgets").LineWidgets;
-var dom = require("../lib/dom");
-var Range = require("../range").Range;
+var LineWidgets = require("line_widgets").LineWidgets;
+var dom = require("lib/dom");
+var Range = require("range").Range;
 
 function binarySearch(array, needle, comparator) {
     var first = 0;

@@ -1,7 +1,7 @@
 ace.define("ace/mode/gcode_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module) {
     "use strict";
 
-    var oop = require("../lib/oop");
+    var oop = require("lib/oop");
     var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
     var GcodeHighlightRules = function() {
@@ -66,10 +66,10 @@ ace.define("ace/mode/gcode_highlight_rules",["require","exports","module","ace/l
 ace.define("ace/mode/gcode",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/gcode_highlight_rules","ace/range"], function(require, exports, module) {
     "use strict";
 
-    var oop = require("../lib/oop");
+    var oop = require("lib/oop");
     var TextMode = require("./text").Mode;
     var GcodeHighlightRules = require("./gcode_highlight_rules").GcodeHighlightRules;
-    var Range = require("../range").Range;
+    var Range = require("range").Range;
 
     var Mode = function() {
         this.HighlightRules = GcodeHighlightRules;
