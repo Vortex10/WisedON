@@ -39,3 +39,18 @@ color:#d2d2d2;
     text-align:center;
     font-weight: 700;
 }
+span.awhite {
+    font-size: 12px;
+}
+.site-menubar {
+    background: #2c2c2c;
+        z-index: 19999999;
+}
+.site-menubar-fold .page, .site-menubar-fold .site-footer {
+  margin-left:0px !important;
+}
+
+.page {
+
+    background: #fff;
+}
