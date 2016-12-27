@@ -12,9 +12,36 @@ a.iconestatic:hover{
 .lowercase{
   font-size:12px ;
 }
+.lowercasehour{
+  font-size:12px ;
+  font-weight:bold;
+}
+.userareatext{
+  font-size:14px ;
+  font-weight:bold;
+  top: 15%;
+    position: relative;
+}
+.dropdown-user {
+    margin-top: 0px !important;
+      padding: 0px 0 !important;
+      border-radius:0;
+  }
+
+.userareamail{
+top: 15%;
+  position: relative;
+}
 a.aorange{
   font-size:12px ;
   color:#ef7c00;
+}
+.spanorange{
+  color:#ef7c00;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+
+  border-top:0px solid;
 }
 .md-notifications{
   font-size: x-large;
@@ -23,6 +50,32 @@ a.aorange{
     width: 90px;
     display: none;
 
+}
+.userarea{
+  margin:0 0 0 0 !important;
+
+background-color:#EDEDED;
+}
+td.iconsize {
+    left: 1.5%;
+    position: relative;
+}
+.table {
+    color: #757575;
+    border: 1px solid #EDEDED;
+    background-color: white;
+    box-shadow: 1px 0px 1px 1px #EDEDED;
+}
+.userarea{
+  height:75px;
+  margin: 2px 0;
+text-align: center;
+
+}
+.dropdown-user {
+    left: auto;
+    width: 201px;
+    font-size: 13px;
 }
 .site-navbar {
     background-image: url("../../assets/images/preview.png");}
@@ -105,11 +158,13 @@ color:#d2d2d2;
   border:0px;
   border-radius:0px;
 }
-.buttonsize{
-      width: 20%;
-      left: 9%;
-position: relative;
+.buttonsize {
+    width: 27%;
+    left: 5%;
+    position: relative;
+    padding-left: 8% !Important;
 }
+
 .iconsize{
   width: 80px;
 }
@@ -200,7 +255,15 @@ a.referencetask {
 .site-menu>.site-menu-item.active>a:hover {
     color: #FF7F00;
 }
-@media (min-width: 1600px){}
+@media (min-width: 1600px){
 .col-xlg-5 {
     width: 100%;
 }}
+@media (max-width: 1600px){
+.buttonsize {
+    width: 36%;
+    left: 3%;
+    position: relative;
+    padding-left: 8% !Important;
+}
+}
