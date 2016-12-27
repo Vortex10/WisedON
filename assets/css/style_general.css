@@ -60,6 +60,10 @@ td.iconsize {
     left: 1.5%;
     position: relative;
 }
+.panel-title {
+    display: block;
+    padding: 20px 0px;
+  }
 .table {
     color: #757575;
     border: 1px solid #EDEDED;
