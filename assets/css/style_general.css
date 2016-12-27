@@ -1,3 +1,11 @@
+a.iconestatic {
+    color: #6E6E6E;
+    text-decoration: none;
+}
+a.iconestatic:hover{
+  color:#ef7c00;
+}
+
 .titleorange{
   color:#ef7c00;
 }
