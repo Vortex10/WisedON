@@ -56,9 +56,18 @@ a.aorange{
 
 background-color:#EDEDED;
 }
+hr.verticalliner{
+height:35px;
+    border-left: 1px solid #e0e0e0;
+}
 td.iconsize {
     left: 1.5%;
     position: relative;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.maintd{
+  width:36%;
 }
 .panel-title {
     display: block;
@@ -164,7 +173,7 @@ color:#d2d2d2;
 }
 .buttonsize {
     width: 27%;
-    left: 5%;
+    left: 12%;
     position: relative;
     padding-left: 8% !Important;
 }
@@ -259,6 +268,9 @@ a.referencetask {
 .site-menu>.site-menu-item.active>a:hover {
     color: #FF7F00;
 }
+.widthminimum{
+  width:10px;
+}
 @media (min-width: 1600px){
 .col-xlg-5 {
     width: 100%;
@@ -269,5 +281,12 @@ a.referencetask {
     left: 3%;
     position: relative;
     padding-left: 8% !Important;
+}}
+@media (max-width: 1300px){
+.buttonsize {
+    width: 36%;
+    left: 1%;
+    position: relative;
+    padding-left: 4% !Important;
 }
 }
