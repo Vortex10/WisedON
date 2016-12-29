@@ -32,23 +32,6 @@ a.iconestatic:hover{
       padding: 0px 0 !important;
       border-radius:0;
   }
-  .questionicon{
-  font-size: 0.89em !important;
-line-height: .75em;
-vertical-align: -15%;
-color: #ef7c00;
-margin-left:10px;
-}
-a.breadcrumborange{
-  font-size:15px ;
-  color:#ef7c00 !important;
-  margin-right:10px
-}
-a.breadcrumborange.active{
-  font-size:15px ;
-  color:#000 !important;
-  margin-right:10px
-}
 
 .userareamail{
 top: 15%;
@@ -57,14 +40,6 @@ top: 15%;
 a.aorange{
   font-size:12px ;
   color:#ef7c00;
-}
-p.basictext {
-    font-size: 12px;
-    width: 100%;
-    font-weight: 400;
-}
-.basictext{
-
 }
 .spanorange{
   color:#ef7c00;
